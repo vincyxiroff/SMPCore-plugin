@@ -51,24 +51,27 @@ public class Events implements Listener {
 
     @EventHandler
     public void onPlayerEnterBed(PlayerBedEnterEvent e){
-        try{
-            Thread.sleep(2000);
-        } catch (InterruptedException exc){
-            Thread.currentThread().interrupt();
-            System.out.println(exc);
-        }
-        Player player = e.getPlayer();
-        PlayerBedEnterEvent.BedEnterResult result = e.getBedEnterResult();
-        if(e.getBedEnterResult() == PlayerBedEnterEvent.BedEnterResult.OK){
-            World world = e.getPlayer().getWorld();
-
-            world.setTime(0);
-            world.setStorm(false);
-            world.setThundering(false);
-            Bukkit.broadcastMessage(ChatColor.GREEN + "La notte è stata skippata da " + e.getPlayer().getDisplayName());
-            e.setCancelled(true);
+        if(SMPCore.getPlugin().getConfig().getBoolean("allow-one-player-skip-night")){
+            try{
+                Thread.sleep(2000);
+            } catch (InterruptedException exc){
+                Thread.currentThread().interrupt();
+                System.out.println(exc);
+            }
+            Player player = e.getPlayer();
+            PlayerBedEnterEvent.BedEnterResult result = e.getBedEnterResult();
+            if(e.getBedEnterResult() == PlayerBedEnterEvent.BedEnterResult.OK){
+                World world = e.getPlayer().getWorld();
+                String skip_msg = SMPCore.getPlugin().getConfig().getString("skip-msg");
+                skip_msg = skip_msg.replace("%player%", e.getPlayer().getDisplayName());
+                world.setTime(0);
+                world.setStorm(false);
+                world.setThundering(false);
+                if(skip_msg != null){
+                    Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', skip_msg));
+                }
+                e.setCancelled(true);
+            }
         }
     }
-
-
 }
