@@ -72,6 +72,9 @@ public class Events implements Listener {
                 }
                 e.setCancelled(true);
             }
+        }else{
+            // do nothing
+            System.out.println("Night Has NOT been skipped, as it was disabled from the config");
         }
     }
 
