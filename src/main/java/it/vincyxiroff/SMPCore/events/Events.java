@@ -8,11 +8,9 @@ import org.bukkit.World;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
-import org.bukkit.event.world.TimeSkipEvent;
 
 public class Events implements Listener {
 
@@ -22,8 +20,8 @@ public class Events implements Listener {
         Player p = e.getPlayer();
         String firstTimeJoinMsg = SMPCore.getPlugin().getConfig().getString("first-join-msg");
         String joinagainmsg = SMPCore.getPlugin().getConfig().getString("join-msg");
-        joinagainmsg.replace("%player%", e.getPlayer().getDisplayName());
-        firstTimeJoinMsg.replace("%player%", e.getPlayer().getDisplayName());
+        joinagainmsg = joinagainmsg.replace("%player%", e.getPlayer().getDisplayName());
+        firstTimeJoinMsg = firstTimeJoinMsg.replace("%player%", e.getPlayer().getDisplayName());
         if(!e.getPlayer().hasPlayedBefore()){
             Location loc = SMPCore.getPlugin().getConfig().getLocation("Spawn");
 
