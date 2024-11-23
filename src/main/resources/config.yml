@@ -3,17 +3,12 @@ Spawn:
   y:
   z:
 
-# ------ Configs --------
 
-allow-one-player-skip-night: true
-
-#
 
 # ------ Custom Item --------
 
 beef-amount: 8
 
-#
 
 # ------ MESSAGES --------
 
@@ -24,8 +19,6 @@ beef-amount: 8
 join-msg: '&a&l Ciao &d&l%player%&a&l, ben ritornato nel server'
 
 first-join-msg: '&a&l Ciao &d&l%player%&a&l, benvenuto nel server'
-
-skip-msg: '&a&lThe Night Has Been Skipped By &d&l%player%'
 
 #
 
