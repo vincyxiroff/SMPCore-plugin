@@ -1,0 +1,27 @@
+Spawn:
+  x:
+  y:
+  z:
+
+
+
+
+
+beef-amount: 8
+
+
+# ------ MESSAGES --------
+
+# avaible prefix:
+# - %player% - get the player name
+#
+
+join-msg: '&a&l Ciao &d&l%player%&a&l, ben ritornato nel server'
+
+first-join-msg: '&a&l Ciao &d&l%player%&a&l, benvenuto nel server'
+
+#
+
+#
+
+#

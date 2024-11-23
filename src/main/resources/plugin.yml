@@ -1,0 +1,46 @@
+name: SMPCore
+version: '1.0-SNAPSHOT'
+main: it.vincyxiroff.SMPCore.SMPCore
+api-version: '1.21'
+commands:
+  feed:
+    description: restore your food bar
+    aliases:
+      - food
+      - refillfood
+    usage: /feed [player]
+    permission: smpcore.admin.feed
+    permission-message: you need to have smpcore.admin.feed to use this command
+
+  setspawn:
+    description: let you set spawn
+    aliases:
+      - spawnset
+    usage: /setspawn
+    permission: smpcore.admin.setspawn
+
+  spawn:
+    description: makes you go to the spawn that has been set
+    usage: /spawn
+    permission: smpcore.spawn
+
+  give-beef:
+    description: Give beef to you or a specific player
+    usage: /give-beef [player]
+
+permission:
+  smpcore.admin.*:
+    description: GIVES YOU ALL THE ADMIN PERMS
+    children:
+      smpcore.admin.feed: true
+      smpcore.admin.setspawn: true
+      smpcore.spawn: true
+
+  smpcore.admin.feed:
+    description: give you permission to max your food bar
+
+  smpcore.admin.setspawn:
+    description: give you permission to set spawn
+
+  smpcore.spawn:
+    description: give you permission to go to the spawn
