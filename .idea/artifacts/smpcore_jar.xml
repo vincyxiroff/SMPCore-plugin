@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="smpcore:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/smpcore_jar</output-path>
+    <output-path>$USER_HOME$/Downloads/srv mio/plugins</output-path>
     <root id="archive" name="smpcore.jar">
       <element id="module-output" name="smpcore" />
     </root>
