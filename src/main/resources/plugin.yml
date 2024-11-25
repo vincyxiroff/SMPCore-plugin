@@ -39,6 +39,11 @@ commands:
     usage: /admin-gui
     permission: smpcore.admin.gui-open
 
+  fly:
+    description: enabled/disables fly
+    usage: /fly [player]
+    permission: smpcore.admin.fly
+
 permission:
   smpcore.admin.*:
     description: GIVES YOU ALL THE ADMIN PERMS
@@ -49,6 +54,8 @@ permission:
       smpcore.admin.test.cmd1: true
       smpcore.admin.reload: true
       smpcore.admin.gui-open: true
+      smpcore.admin.fly: true
+      smpcore.admin.fly.others: true
 
   smpcore.admin.feed:
     description: give you permission to max your food bar
@@ -67,3 +74,9 @@ permission:
 
   smpcore.admin.gui-open:
     description: let you open the admin gui
+
+  smpcore.admin.fly:
+    description: fly permission
+
+  smpcore.admin.fly.others:
+    description: fly others permission

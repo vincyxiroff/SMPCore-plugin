@@ -1,4 +1,4 @@
-package it.vincyxiroff.SMPCore.cmds;
+package it.vincyxiroff.SMPCore.cmds.admin;
 
 import it.vincyxiroff.SMPCore.SMPCore;
 import org.bukkit.ChatColor;
