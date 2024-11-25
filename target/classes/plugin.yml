@@ -27,6 +27,17 @@ commands:
   give-beef:
     description: Give beef to you or a specific player
     usage: /give-beef [player]
+    permission: smpcore.admin.test.cmd1
+
+  s-reload:
+    description: reloads the configuration of the plugin
+    usage: /s-reload
+    permission: smpcore.admin.reload
+
+  admin-gui:
+    description: jus a admin gui
+    usage: /admin-gui
+    permission: smpcore.admin.gui-open
 
 permission:
   smpcore.admin.*:
@@ -35,6 +46,9 @@ permission:
       smpcore.admin.feed: true
       smpcore.admin.setspawn: true
       smpcore.spawn: true
+      smpcore.admin.test.cmd1: true
+      smpcore.admin.reload: true
+      smpcore.admin.gui-open: true
 
   smpcore.admin.feed:
     description: give you permission to max your food bar
@@ -44,3 +58,12 @@ permission:
 
   smpcore.spawn:
     description: give you permission to go to the spawn
+
+  smpcore.admin.test.cmd1:
+    description: gives u access to secret test command
+
+  smpcore.admin.reload:
+    description: let you reload the plugin config
+
+  smpcore.admin.gui-open:
+    description: let you open the admin gui

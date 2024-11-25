@@ -20,8 +20,6 @@ public class Events implements Listener {
         Player p = e.getPlayer();
         String firstTimeJoinMsg = SMPCore.getPlugin().getConfig().getString("first-join-msg");
         String joinagainmsg = SMPCore.getPlugin().getConfig().getString("join-msg");
-        joinagainmsg = joinagainmsg.replace("%player%", e.getPlayer().getDisplayName());
-        firstTimeJoinMsg = firstTimeJoinMsg.replace("%player%", e.getPlayer().getDisplayName());
         if(!e.getPlayer().hasPlayedBefore()){
             Location loc = SMPCore.getPlugin().getConfig().getLocation("Spawn");
 
@@ -29,11 +27,13 @@ public class Events implements Listener {
                 p.teleport(loc);
             }
             if (firstTimeJoinMsg != null){
+                firstTimeJoinMsg = firstTimeJoinMsg.replace("%player%", e.getPlayer().getDisplayName());
                 e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', firstTimeJoinMsg));
             }
 
         }else {
             if(joinagainmsg != null){
+                joinagainmsg = joinagainmsg.replace("%player%", e.getPlayer().getDisplayName());
                 e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', joinagainmsg));
             }
             System.out.println(p.getDisplayName() + " joined");

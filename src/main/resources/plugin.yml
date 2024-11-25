@@ -34,6 +34,11 @@ commands:
     usage: /s-reload
     permission: smpcore.admin.reload
 
+  admin-gui:
+    description: jus a admin gui
+    usage: /admin-gui
+    permission: smpcore.admin.gui-open
+
 permission:
   smpcore.admin.*:
     description: GIVES YOU ALL THE ADMIN PERMS
@@ -43,6 +48,7 @@ permission:
       smpcore.spawn: true
       smpcore.admin.test.cmd1: true
       smpcore.admin.reload: true
+      smpcore.admin.gui-open: true
 
   smpcore.admin.feed:
     description: give you permission to max your food bar
@@ -58,3 +64,6 @@ permission:
 
   smpcore.admin.reload:
     description: let you reload the plugin config
+
+  smpcore.admin.gui-open:
+    description: let you open the admin gui

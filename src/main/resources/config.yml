@@ -22,6 +22,9 @@ first-join-msg: '&a&l Ciao &d&l%player%&a&l, benvenuto nel server'
 
 #
 
-#
+# ------ ADMIN GUI ITEMS GIVE --------
+
+# how much beef?
+beef-admin-gui: 16
 
 #
